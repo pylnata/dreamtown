@@ -1,0 +1,15 @@
+.bg-video {
+  height: 100%;
+  width: 100%;
+  // z-index: 1000;
+  opacity: .15;
+  overflow: hidden;
+  filter: grayscale(100%);
+
+  &__content {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+  }
+}

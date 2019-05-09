@@ -298,6 +298,64 @@ body {
     font-weight: 100;
     margin-bottom: 5rem; }
 
+.bg-video {
+  height: 100%;
+  width: 100%;
+  opacity: .15;
+  overflow: hidden;
+  filter: grayscale(100%); }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.review {
+  width: 75%;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #8e44ad;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  transform: skewX(-12deg);
+  display: grid;
+  grid-template-columns: 15rem 1fr; }
+  .review__shape {
+    width: 15rem;
+    height: 15rem;
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    border-radius: none; }
+  .review__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all 0.5s; }
+  .review__text {
+    color: #fff;
+    transform: skewX(12deg); }
+  .review__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  .review:hover .review__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .review:hover .review__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%); }
+
 .footer {
   grid-column: full-start / full-end;
   grid-row: -2 / span 1;
@@ -373,7 +431,7 @@ body {
 .tours {
   grid-column: center-start/center-end;
   grid-row: 5 / span 1;
-  padding-top: 25rem;
+  padding-top: 15rem;
   display: grid;
   grid-template-rows: repeat(2, min-content);
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -388,7 +446,17 @@ body {
 .reviews {
   grid-column: full-start / full-end;
   grid-row: 6 / span 1;
-  background-color: #b37bcb; }
+  padding-top: 15rem;
+  display: grid; }
+  .reviews .bg-video, .reviews__content {
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1; }
+  .reviews__content {
+    padding: 5rem;
+    display: grid;
+    grid-row-gap: 5rem;
+    justify-items: center;
+    z-index: 2000; }
 
 .booking {
   grid-column: center-start / center-end;
