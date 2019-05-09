@@ -10,3 +10,56 @@ html {
 
 body {
   box-sizing: border-box; }
+
+.container {
+  display: grid;
+  grid-template-rows: 85vh repeat(7, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  background-color: #f7f7f7; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #fff;
+  font-size: 1.6rem; }
+
+.footer {
+  grid-column: full-start / full-end;
+  grid-row: -2 / span 1;
+  background-color: #8e44ad; }
+
+.header {
+  grid-column: full-start / full-end;
+  grid-row: 1 / span 1;
+  background-color: #8e44ad; }
+
+.details {
+  grid-column: center-start / center-end;
+  grid-row: 2 / span 1;
+  background-color: #b37bcb; }
+
+.about {
+  grid-column: center-start / center-end;
+  grid-row: 3 / span 1;
+  background-color: #5c2c70; }
+
+.features {
+  grid-column: full-start / full-end;
+  grid-row: 4 / span 1;
+  background-color: #b37bcb; }
+
+.tours {
+  grid-column: center-start/center-end;
+  grid-row: 5 / span 1;
+  background-color: #8e44ad; }
+
+.reviews {
+  grid-column: full-start / full-end;
+  grid-row: 6 / span 1;
+  background-color: #b37bcb; }
+
+.booking {
+  grid-column: center-start / center-end;
+  grid-row: -3 / span 1;
+  background-color: #5c2c70; }

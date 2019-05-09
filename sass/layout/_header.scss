@@ -1,0 +1,6 @@
+.header {
+  grid-column: full-start / full-end;
+  grid-row: 1 / span 1;
+
+  background-color: $color-primary;
+}
