@@ -27,8 +27,21 @@
 .about {
   grid-column: center-start / center-end;
   grid-row: 3 / span 1;
-  background-color: $color-primary-dark;
+
+  display: grid;
+  grid-row-gap: 6rem;
+  margin-top: 10vh;
+  grid-template-rows: min-content 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 3rem;
+
+  & > h2 {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+  min-height: 80vh;
 }
+
 
 .features {
   grid-column: full-start / full-end;
