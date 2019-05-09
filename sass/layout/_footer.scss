@@ -2,5 +2,51 @@
   grid-column: full-start / full-end;
   grid-row: -2 / span 1;
 
-  background-color: $color-primary;
+  padding: 8rem;
+
+  background-color: $color-grey-dark-3;
+  font-size: 1.4rem;
+  color: $color-grey-light-1;
+
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 5rem;
+    grid-gap: 2rem;
+  }
+
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-grey-light-1;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: transform 0.2s;
+      display: block;
+      padding: 2rem;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $color-grey-dark-1;
+      transform: translateY(-3px);
+    }
+  }
+
+  &__copyright {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
+  }
 }

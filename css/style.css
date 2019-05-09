@@ -433,7 +433,37 @@ body {
 .footer {
   grid-column: full-start / full-end;
   grid-row: -2 / span 1;
-  background-color: #8e44ad; }
+  padding: 8rem;
+  background-color: #333;
+  font-size: 1.4rem;
+  color: #f7f7f7; }
+  .footer__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 5rem;
+    grid-gap: 2rem; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #f7f7f7;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+    display: block;
+    padding: 2rem; }
+  .footer__link:hover, .footer__link:active {
+    background-color: #777;
+    transform: translateY(-3px); }
+  .footer__copyright {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center; }
 
 .header {
   grid-column: full-start / full-end;
