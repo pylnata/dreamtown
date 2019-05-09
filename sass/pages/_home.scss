@@ -1,7 +1,27 @@
 .details {
   grid-column: center-start / center-end;
   grid-row: 2 / span 1;
-  background-color: $color-primary-light;
+
+  margin-top: 3rem;
+
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__item {
+    font-size: 1.7rem;
+    color: $color-grey-dark-2;
+    background: $color-grey-light-2;
+    padding: .5rem 2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: 1rem;
+    font-size: 2rem;
+  }
 }
 
 .about {

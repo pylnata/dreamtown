@@ -149,7 +149,22 @@ body {
 .details {
   grid-column: center-start / center-end;
   grid-row: 2 / span 1;
-  background-color: #b37bcb; }
+  margin-top: 3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .details__item {
+    font-size: 1.7rem;
+    color: #999;
+    background: #eee;
+    padding: .5rem 2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center; }
+  .details__icon {
+    margin-right: 1rem;
+    font-size: 2rem; }
 
 .about {
   grid-column: center-start / center-end;

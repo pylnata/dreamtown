@@ -24,5 +24,6 @@ body {
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     [center-end] minmax(6rem, 1fr) [full-end]; // 140*8=1120px central part max
-  background-color: $color-grey-light-1;
+
+    background-color: $color-grey-light-1;
 }
