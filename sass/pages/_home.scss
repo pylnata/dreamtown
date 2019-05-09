@@ -67,7 +67,24 @@
 .tours {
   grid-column: center-start/center-end;
   grid-row: 5 / span 1;
-  background-color: $color-primary;
+
+  padding-top: 25rem;
+
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 3rem;
+
+  & > h2 {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  & > .btn {
+    justify-self: center;
+    grid-column: 1 / -1;
+  }
+
 }
 
 .reviews {
