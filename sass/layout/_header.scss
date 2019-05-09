@@ -2,5 +2,31 @@
   grid-column: full-start / full-end;
   grid-row: 1 / span 1;
 
-  background-color: $color-primary;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.7),
+      rgba($color-primary-dark, 0.7)
+    ),
+    url(../img/hero-2000.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
+
+
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(min-content, 10rem)  1fr;
+  justify-items: center;
+  align-items: start;
+
+
+  &__logo-box {
+    padding: 2rem 3rem;
+    justify-self: start;
+  }
+
+  &__logo {
+      height: 4.5rem;
+      width: 4.5rem;
+      fill: $color-white;
+  }
 }

@@ -8,7 +8,13 @@ body {
 }
 
 .heading-1 {
-
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  animation: moveInLeft 1s ease-out;
 }
 
 .heading-2 {
@@ -16,7 +22,12 @@ body {
 }
 
 .heading-3 {
-
+  color: $color-grey-light-2;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.7rem;
+  animation: moveInRight 1s ease-out;
+  line-height: 1;
 }
 
 .heading-4 {

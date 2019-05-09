@@ -1,3 +1,31 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 *,
 *::after,
 *::before {
@@ -24,6 +52,76 @@ body {
   color: #fff;
   font-size: 1.6rem; }
 
+.heading-1 {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  animation: moveInLeft 1s ease-out; }
+
+.heading-3 {
+  color: #eee;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.7rem;
+  animation: moveInRight 1s ease-out;
+  line-height: 1; }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn--primary {
+  background-color: #8e44ad;
+  color: #fff; }
+  .btn--primary::after {
+    background-color: #8e44ad; }
+
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
+
 .footer {
   grid-column: full-start / full-end;
   grid-row: -2 / span 1;
@@ -32,7 +130,21 @@ body {
 .header {
   grid-column: full-start / full-end;
   grid-row: 1 / span 1;
-  background-color: #8e44ad; }
+  background-image: linear-gradient(to right bottom, rgba(179, 123, 203, 0.7), rgba(92, 44, 112, 0.7)), url(../img/hero-2000.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(min-content, 10rem) 1fr;
+  justify-items: center;
+  align-items: start; }
+  .header__logo-box {
+    padding: 2rem 3rem;
+    justify-self: start; }
+  .header__logo {
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: #fff; }
 
 .details {
   grid-column: center-start / center-end;
