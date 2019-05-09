@@ -294,8 +294,11 @@ body {
     border-top-right-radius: 3px;
     background-image: linear-gradient(rgba(179, 123, 203, 0.7), rgba(92, 44, 112, 0.7)), url(../img/pic-1-large.jpg);
     background-size: cover;
-    background-blend-mode: screen;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    background-blend-mode: screen; }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .card__picture {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); } }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -402,10 +405,12 @@ body {
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     overflow: hidden;
-    border-radius: 50%;
-    clip-path: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    border-radius: none; }
+    border-radius: 50%; }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .review__shape {
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        border-radius: 0; } }
     @media only screen and (max-width: 37.5em) {
       .review__shape {
         transform: translateX(-3rem) skewX(0); } }
@@ -554,11 +559,14 @@ body {
   background-image: linear-gradient(to right bottom, rgba(179, 123, 203, 0.7), rgba(92, 44, 112, 0.7)), url(../img/hero-2000.jpg);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
   display: grid;
   grid-template-rows: 1fr min-content minmax(min-content, 10rem) 1fr;
   justify-items: center;
   align-items: start; }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh); } }
   .header__logo-box {
     padding: 2rem 3rem;
     justify-self: start; }
