@@ -46,7 +46,22 @@
 .features {
   grid-column: full-start / full-end;
   grid-row: 4 / span 1;
-  background-color: $color-primary-light;
+
+  background-color: $color-primary;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 3rem;
+  }
+
+  padding: 15rem 25rem;
+  transform: skewY(-7deg);
+  margin-top: 3rem;
+  & > * {
+    transform: skewY(7deg);
+  }
+
 }
 
 .tours {
