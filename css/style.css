@@ -484,6 +484,40 @@ body {
     width: 4.5rem;
     fill: #fff; }
 
+.nav {
+  grid-row: 1 / 2;
+  grid-column: full-start / full-end;
+  padding: 2rem 6rem;
+  list-style: none;
+  display: grid;
+  z-index: 10;
+  grid-column-gap: 4rem;
+  grid-auto-flow: column;
+  justify-content: end;
+  height: 10rem; }
+  .nav__link {
+    font-size: 2rem;
+    font-weight: 300;
+    position: relative; }
+    .nav__link:link, .nav__link:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #f7f7f7; }
+    .nav__link:hover, .nav__link:active {
+      text-decoration: none; }
+    .nav__link:hover::after {
+      width: 100%; }
+    .nav__link::after {
+      content: "";
+      height: 1px;
+      background-color: #f7f7f7;
+      position: absolute;
+      margin-top: 3px;
+      top: 100%;
+      left: 0;
+      width: 0;
+      transition: all .1s; }
+
 .details {
   grid-column: center-start / center-end;
   grid-row: 2 / span 1;

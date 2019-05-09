@@ -1,0 +1,44 @@
+.nav {
+  grid-row: 1 / 2;
+  grid-column: full-start / full-end;
+  padding: 2rem 6rem;
+  list-style: none;
+  display: grid;
+  z-index: 10;
+  grid-column-gap: 4rem;
+  grid-auto-flow: column;
+  justify-content: end;
+  height: 10rem;
+
+  &__link {
+    font-size: 2rem;
+    font-weight: 300;
+    position: relative;
+
+    &:link, &:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-grey-light-1;
+    }
+
+    &:hover, &:active {
+      text-decoration: none;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      height: 1px;
+      background-color: $color-grey-light-1;
+      position: absolute;
+      margin-top: 3px;
+      top: 100%;
+      left: 0;
+      width: 0;
+      transition: all .1s;
+    }
+  }
+}
