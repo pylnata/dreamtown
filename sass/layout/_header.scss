@@ -7,9 +7,19 @@
       rgba($color-primary-light, 0.7),
       rgba($color-primary-dark, 0.7)
     ),
-    url(../img/hero-2000.jpg);
+    url(../img/hero-1200.jpg);
   background-size: cover;
   background-position: top;
+
+
+  @include high-resolution-screen {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.7),
+      rgba($color-primary-dark, 0.7)
+    ),
+    url(../img/hero-2000.jpg);
+  }
 
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);

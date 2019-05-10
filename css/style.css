@@ -292,9 +292,12 @@ body {
     grid-column: 1 / span 1;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    background-image: linear-gradient(rgba(179, 123, 203, 0.7), rgba(92, 44, 112, 0.7)), url(../img/pic-1-large.jpg);
+    background-image: linear-gradient(rgba(179, 123, 203, 0.7), rgba(92, 44, 112, 0.7)), url(../img/pic-1-1000.jpg);
     background-size: cover;
     background-blend-mode: screen; }
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+      .card__picture {
+        background-image: linear-gradient(to right bottom, rgba(179, 123, 203, 0.7), rgba(92, 44, 112, 0.7)), url(../img/pic-1-2000.jpg); } }
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
       .card__picture {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -352,8 +355,11 @@ body {
         box-shadow: none; }
         .card__side--back {
           transform: rotateY(0);
-          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
           padding: 3rem; }
+          @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            .card__side--back {
+              -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+              clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); } }
       .card:hover .card__side--front {
         transform: rotateY(0); }
       .card__details {
@@ -556,13 +562,16 @@ body {
 .header {
   grid-column: full-start / full-end;
   grid-row: 1 / span 1;
-  background-image: linear-gradient(to right bottom, rgba(179, 123, 203, 0.7), rgba(92, 44, 112, 0.7)), url(../img/hero-2000.jpg);
+  background-image: linear-gradient(to right bottom, rgba(179, 123, 203, 0.7), rgba(92, 44, 112, 0.7)), url(../img/hero-1200.jpg);
   background-size: cover;
   background-position: top;
   display: grid;
   grid-template-rows: 1fr min-content minmax(min-content, 10rem) 1fr;
   justify-items: center;
   align-items: start; }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(179, 123, 203, 0.7), rgba(92, 44, 112, 0.7)), url(../img/hero-2000.jpg); } }
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -715,17 +724,17 @@ body {
   grid-row: -3 / span 1;
   margin: 15rem 0;
   background-color: #8e44ad;
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/pic-2-large.jpg);
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/pic-1-2000.jpg);
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
   @media only screen and (max-width: 75em) {
     .booking {
-      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/pic-2-large.jpg);
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/pic-1-2000.jpg);
       background-size: cover; } }
   @media only screen and (max-width: 56.25em) {
     .booking {
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/pic-2-large.jpg); } }
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/pic-1-2000.jpg); } }
   .booking__form {
     width: 50%;
     padding: 6rem; }

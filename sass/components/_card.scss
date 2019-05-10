@@ -74,7 +74,16 @@
     background-image: linear-gradient(
       rgba($color-primary-light, .7),
       rgba($color-primary-dark, .7)
-    ), url(../img/pic-1-large.jpg);
+    ), url(../img/pic-1-1000.jpg);
+
+    @include high-resolution-screen {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.7),
+        rgba($color-primary-dark, 0.7)
+      ),
+      url(../img/pic-1-2000.jpg);
+  }
 
     background-size: cover;
     background-blend-mode: screen;

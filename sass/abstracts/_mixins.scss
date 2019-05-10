@@ -33,3 +33,12 @@ $breakpoint arguement choices:
   }
 }
 
+
+ @mixin high-resolution-screen {
+   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), //retina and not phone
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) { // screen > 2000px
+      @content
+    };
+ }
+
