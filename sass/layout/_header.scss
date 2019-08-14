@@ -4,8 +4,8 @@
 
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-primary-light, 0.7),
-      rgba($color-primary-dark, 0.7)
+      rgba($color-primary-light, 0.3),
+      rgba($color-primary-dark, 0.3)
     ),
     url(../img/hero-1200.jpg);
   background-size: cover;
@@ -15,10 +15,10 @@
   @include high-resolution-screen {
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-primary-light, 0.7),
-      rgba($color-primary-dark, 0.7)
+      rgba($color-primary-light, 0.3),
+      rgba($color-primary-dark, 0.3)
     ),
-    url(../img/hero-2000.jpg);
+    url(../img/hero-2000-new.jpg);
   }
 
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {

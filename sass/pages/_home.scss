@@ -69,7 +69,12 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include respond(tab-port) {
+    @include respond(tab-land) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+    }
+
+    @include respond(phone) {
       grid-template-columns: 80vw;
       justify-content: center;
     }

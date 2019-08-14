@@ -6,6 +6,7 @@
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
   transition: transform .3s;
+  min-width: 200px;
 
   &__icon {
       font-size: 6rem;
