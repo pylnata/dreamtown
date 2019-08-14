@@ -238,8 +238,10 @@ body {
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  transition: transform .3s;
-  min-width: 200px; }
+  transition: transform .3s; }
+  @media only screen and (max-width: 75em) {
+    .feature {
+      min-width: 200px; } }
   .feature__icon {
     font-size: 6rem;
     margin-bottom: .5rem;
@@ -576,7 +578,7 @@ body {
   align-items: start; }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(212, 153, 185, 0.3), rgba(46, 41, 78, 0.3)), url(../img/hero-2000-new.jpg); } }
+      background-image: linear-gradient(to right bottom, rgba(212, 153, 185, 0.3), rgba(46, 41, 78, 0.3)), url(../img/hero-2000.jpg); } }
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
